@@ -1,0 +1,9 @@
+<launch>
+    <!-- auturbo_pkg의 각 파이썬 노드 실행 -->
+    <node pkg="auturbo_pkg" type="imu.py" name="imu_node" />
+    <node pkg="auturbo_pkg" type="gps.py" name="gps_node"/>
+    <node pkg="auturbo_pkg" type="gpsimu_parser.py" name="gpsimu_parser_node" />
+    <node pkg="auturbo_pkg" type="tf_pub.py" name="tf_pub_node" />
+    <node pkg="auturbo_pkg" type="laser_scan" name="laser_scan_node" />
+    <!-- <node pkg="auturbo_pkg" type="map_publisher.py" name="map_publisher_node" /> -->
+</launch>

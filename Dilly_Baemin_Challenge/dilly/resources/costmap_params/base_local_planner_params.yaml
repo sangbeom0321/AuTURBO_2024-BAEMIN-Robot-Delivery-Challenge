@@ -1,0 +1,97 @@
+base_global_planner: "navfn/NavfnROS"
+# base_local_planner: "dwa_local_planner/DWAPlannerROS"
+# base_local_planner: base_local_planner/TrajectoryPlannerROS
+
+# Determines whether or not to shutdown the costmaps of the node when
+# move_base is in an inactive state
+shutdown_costmaps: false
+
+# The rate in Hz at which to run the control loop and send velocity
+# commands to the base.
+controller_frequency: 1.0
+# How long the controller will wait in seconds without receiving a
+# valid control before space-clearing operations are performed.
+# controller_patience: 3.0
+
+# The rate in Hz at which to run the global planning loop. If the
+# frequency is set to 0.0, the global planner will only run when a new
+# goal is received or the local planner reports that its path is
+# blocked.
+planner_frequency: 2.0
+# How long the planner will wait in seconds in an attempt to find a
+# valid plan before space-clearing operations are performed.
+planner_patience: 0.1
+
+# How long in seconds to allow for oscillation before executing
+# recovery behaviors. A value of 0.0 corresponds to an infinite
+# timeout.
+oscillation_timeout: 0.0
+# How far in meters the robot must move to be considered not to be
+# oscillating. Moving this far resets the timer counting up to the
+# ~oscillation_timeout 
+oscillation_distance: 0.2
+recovery_behavior_enabled: false
+
+# TrajectoryPlannerROS:
+#     max_vel_x: 2.0
+#     min_vel_x: 0.0
+#     max_vel_theta: 0.83
+#     min_in_place_vel_theta: 0.0
+  
+#     acc_lim_theta: 1.0
+#     acc_lim_x: 0.5
+#     acc_lim_y: 0.5
+  
+#     holonomic_robot: false
+
+# DWAPlannerROS:
+#   # 속도 제한
+#   max_vel_x: 2.0                  # 최대 전진 속도 (m/s)
+#   min_vel_x: 0.0                  # 최소 전진 속도 (m/s)
+#   max_vel_y: 0.0                  # 최대 측면 속도 (m/s)
+#   min_vel_y: 0.0                  # 최소 측면 속도 (m/s)
+#   max_theta: 0.83                  # 최대 각속도 (rad/s)
+#   min_theta: -0.83                 # 최소 각속도 (rad/s)
+
+#   # 가속도 제한
+#   acc_lim_x: 5.0                  # 전진 가속도 (m/s²)
+#   acc_lim_y: 0.0                  # 측면 가속도 (m/s²)
+#   acc_lim_theta: 0.3             # 각 가속도 (rad/s²)
+
+#   # 시뮬레이션 관련
+#   sim_time: 10.0                   # 시뮬레이션 시간 (s)
+#   vx_samples: 30                  # 전진 속도 샘플 수
+#   vy_samples: 0                   # 측면 속도 샘플 수
+#   vtheta_samples: 30              # 각속도 샘플 수
+
+#   # 거리 비용 관련
+#   path_distance_bias: 32.0        # 경로 거리 편향
+#   goal_distance_bias: 24.0         # 목표 거리 편향
+#   occdist_scale: 0.01              # 장애물 거리 스케일
+
+#   # 목표 및 허용 범위 설정
+#   heading_lookahead: 0.325         # 목표 방향 바라보기 시간
+#   heading_scoring: true             # 목표 방향 점수 계산 여부
+
+#   # 장애물 관련
+#   dwa: true                         # DWA 활성화 여부
+#   max_trans_vel: 2.0               # 최대 전진 속도 (m/s)
+#   max_rot_vel: 0.83                 # 최대 회전 속도 (rad/s)
+
+#   # 피드백 및 디버깅
+#   publish_cost_grid: false          # 비용 그리드 출판 여부
+#   publish_feedback: true             # 피드백 출판 여부
+
+#   # 회전 및 전진 가중치
+#   trans_vel_cost: 0.1               # 전진 속도 비용
+#   rot_vel_cost: 0.1                 # 회전 속도 비용
+
+#   # 경로에 대한 비용
+#   goal_cost: 0.9                    # 목표 비용
+#   path_cost: 0.1                    # 경로 비용
+#   occ_cost: 1.0                     # 장애물 비용
+
+#   # 디버깅 관련
+#   global_frame_id: map             # 글로벌 프레임 ID
+#   robot_base_frame: base_footprint        # 로봇 베이스 프레임 ID
+#   footprint: [[-0.3, -0.3], [0.3, -0.3], [0.3, 0.3], [-0.3, 0.3]]  # 로봇의 발자국

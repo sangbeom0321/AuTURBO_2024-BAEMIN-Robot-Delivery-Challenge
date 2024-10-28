@@ -1,0 +1,32 @@
+map_type: costmap
+origin_z: 0.0
+z_resolution: 0.1
+z_voxels: 10
+unknown_threshold: 9
+mark_threshold: 0
+
+publish_voxel_map: false
+transform_tolerance: 0.3
+lethal_cost_threshold: 256
+
+footprint: [[-0.325, -0.325], [-0.325, 0.325], [0.325, 0.325], [0.46, 0.0], [0.325, -0.325]]
+footprint_padding: 0.01
+resolution: 0.1
+
+# obstacles_layer:
+#   # observation_sources: VLP_sensor_sim
+#   observation_sources: scan
+#   scan: 
+#     data_type: LaserScan
+#     topic: /scan_hy
+#     sensor_frame: base_footprint
+#     obstacle_range: 30.0
+#     raytrace_range: 30.0
+#     clearing: true
+#     marking: true
+#     min_obstacle_height: -10.0
+#     max_obstacle_height: 100.0
+  
+# inflater_layer:
+#   inflation_radius: 3.5
+#   cost_scaling_factor: 10.0

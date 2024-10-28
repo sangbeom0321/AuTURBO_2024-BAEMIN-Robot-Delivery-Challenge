@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+  <launch>
+    <!-- Launch the rosbridge websocket-->
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+
+    <!-- Launch the Velodyne Points-->
+    <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch" />
+
+    <!-- Launch the gpsimu parser odom -->
+    <node name="GPS_IMU_parser" pkg="dilly" type="gpsimu_parser.py" output="screen"></node>
+
+  </launch>

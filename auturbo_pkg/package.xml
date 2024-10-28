@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>auturbo_pkg</name>
+  <version>0.0.0</version>
+  <description>The auturbo_pkg package</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <maintainer email="root@todo.todo">root</maintainer>
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <license>TODO</license>
+
+  <!-- Dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>pcl</build_depend>
+
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_depend>pcl_conversions</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>pcl_ros</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>pcl</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>pcl_conversions</exec_depend>
+  <exec_depend>pcl_ros</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <build_type>catkin</build_type>
+  </export>
+</package>
